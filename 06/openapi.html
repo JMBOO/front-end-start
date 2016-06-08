@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open API</title>
+</head>
+<body>
+<div align="center">
+    <input type="text" align="center" id="main">
+    <input type="button" id="input-btn" value="검색">
+    <ul id="wrap"></ul>
+    <script id="template" type="text/template">
+<%
+    for(var i=0; i < list.length; i++) {
+    var data = list[i];
+%>
+    <li>
+        <div align="left">
+            <h6><a href='<%=data.link%>'><%=data.title%></a></h6>
+        </div>
+    </li>
+<% }%>
+    </script>
+    <input type="button" id="moreButton" value="더보기" hidden="hidden">
+    <script src="temp.js" ></script>
+    <script src="ajax.js" ></script>
+    <script src="jsonp.js" ></script>
+    <script src="openapi.js"></script>
+</div>
+</body>
+</html>
